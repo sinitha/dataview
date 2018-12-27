@@ -1,0 +1,174 @@
+
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+*{
+    -webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+}
+.mat-dialog-container {
+  width: 200px;
+}
+
+/* in-flight clone */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  pointer-events: none;
+}
+/* high-performance display:none; helper */
+.gu-hide {
+  left: -9999px !important;
+}
+/* added to mirrorContainer (default = body) while dragging */
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+/******************/
+.nav-tabs{
+  border: none;
+}
+.nav{
+  text-align: center;
+  margin: 0px auto;
+  margin-bottom:  15px;
+  padding: 15px;
+  width: 908px;
+
+}
+.navli{
+  width: 200px;
+  background-color: #4e42f4;
+  margin-right: 5px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+.navli:hover{
+  background-color: #41ebf4;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+.navli.active{
+  background-color: #41ebf4;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+select{
+  float: right;
+ margin-right: 75px;
+ text-align: center;
+ margin-bottom: 20px;
+}
+.selectedcolcss{
+  background: red;
+  color: #fff;
+}
+.Preview-container, .form-container{
+  width: 45%;
+  border: 1px solid #ccc;
+  min-height: 300px;
+  margin: 0px auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  float: left;
+}
+
+
+fieldset {
+  border: none;
+}
+.btn {
+  padding: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #12827E;
+  border: 1px solid #909090;
+  color: #fff;
+  font-weight: 600;
+  bottom: 10px;
+
+}
+
+#left, #right{
+  width: 45%;
+  border: 1px solid #000;
+  min-height: 200px;
+  float: left;
+  position: relative;
+}
+.btn-con {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  bottom: 15px;
+}
+.loader_con{
+  width: 100%;
+  position: relative;
+}
+.loader {
+   border: 13px solid #6bf442;
+   border-top: 13px solid #3498db;
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+   animation: spin 2s linear infinite;
+   position: absolute;
+   margin: 0px auto;
+   left: 49%;
+   top: 10%;
+ }
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.table-con {
+ width: 90%;
+ height: 650px;
+ overflow: auto;
+ position: relative;
+ margin: 0px auto;
+}
+.table-con table{
+  border: 1px solid #ccc;
+}
+.table-con td {
+  vertical-align: middle;
+  text-align: center;
+}
+.table-con thead tr:first-child  {
+  background: aqua;
+  padding: 3px;
+  text-align: center;
+}
+.table-con tbody tr:nth-child(even) {background: antiquewhite}
+.table-con tbody tr:nth-child(odd) {background: azure}

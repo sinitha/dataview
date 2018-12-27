@@ -1,0 +1,5 @@
+<div class="nav nav-tabs">
+  <a class="navli" [class.active]="active == 'task1'"  (click)="activateClass('task1')" routerLink="/task1" >TASK 1  </a>
+  <a class="navli" [class.active]="active == 'task2'"  (click)="activateClass('task2')" routerLink="/task2">TASK 2</a>
+</div>
+<router-outlet></router-outlet>

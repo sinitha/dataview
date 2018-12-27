@@ -1,0 +1,28 @@
+<select *ngIf='columns' (change)="onChange($event.target.value)">
+  <option *ngFor="let column of columns; let i = index" [ngValue]="'opt_'+ i" >
+      {{column | uppercase}}
+  </option>
+</select>
+<div class="table-con">
+<table class="table" *ngIf='columns'>
+  <thead class="black white-text">
+    <tr>
+        <th *ngFor="let column of columns; let i = index"  [ngClass]="(selectedcol == column) ? 'selectedcolcss' : ''">
+            {{column | uppercase}}
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of tabledata">
+
+        <td *ngFor="let column of columns; let i = index" [ngClass]="(selectedcol == column) ? 'selectedcolcss' : ''">
+      <div *ngIf="isObject(data[column]) == true">{{data[column] | json }}</div>
+          <div *ngIf="isObject(data[column]) == false">
+            {{data[column] }}
+          </div>
+
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
